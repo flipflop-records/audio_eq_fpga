@@ -69,6 +69,10 @@ class EqFixed:
     def overflow_count(self) -> int:
         return sum(section.overflow_count for section in self.sections)
 
+    @property
+    def section_overflows(self) -> list[int]:
+        return [section.overflow_count for section in self.sections]
+
 
 if __name__ == "__main__":
     fs_hz = 48_000.0

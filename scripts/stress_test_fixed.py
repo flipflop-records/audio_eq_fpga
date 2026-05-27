@@ -15,6 +15,7 @@ def run_case(name: str, x_float: list[float], coeffs) -> None:
     print(f"overflow count: {eq.overflow_count}")
     print(f"output min/max: {min(y_float):+.6f} / {max(y_float):+.6f}")
     print(f"last sample   : {y_float[-1]:+.9f}")
+    print(f"section overflows: {eq.section_overflows}")
 
 
 def main() -> None:
