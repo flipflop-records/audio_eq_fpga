@@ -99,4 +99,6 @@ package ae_types_pkg is
     AE_BAND_15_KHZ
   );
 
+  type ae_sample_array_t is array (natural range <>) of ae_sample_t;
+
 end package ae_types_pkg;
