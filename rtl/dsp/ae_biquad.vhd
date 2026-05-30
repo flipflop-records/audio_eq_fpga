@@ -74,18 +74,18 @@ begin
   overflow_o <= overflow_q;
 
   process (clk_i)
-    variable p0_v : signed(PRODUCT_W - 1 downto 0);
-    variable p1_v : signed(PRODUCT_W - 1 downto 0);
-    variable p2_v : signed(PRODUCT_W - 1 downto 0);
-    variable p3_v : signed(PRODUCT_W - 1 downto 0);
-    variable p4_v : signed(PRODUCT_W - 1 downto 0);
+    variable p0_v     : signed(PRODUCT_W - 1 downto 0);
+    variable p1_v     : signed(PRODUCT_W - 1 downto 0);
+    variable p2_v     : signed(PRODUCT_W - 1 downto 0);
+    variable p3_v     : signed(PRODUCT_W - 1 downto 0);
+    variable p4_v     : signed(PRODUCT_W - 1 downto 0);
 
     variable acc_v    : signed(MAC_W - 1 downto 0);
     variable scaled_v : signed(MAC_W - 1 downto 0);
     variable y_v      : ae_sample_t;
 
-    variable max_v : signed(MAC_W - 1 downto 0);
-    variable min_v : signed(MAC_W - 1 downto 0);
+    variable max_v    : signed(MAC_W - 1 downto 0);
+    variable min_v    : signed(MAC_W - 1 downto 0);
   begin
     if rising_edge(clk_i) then
       if rst_i = '1' then
